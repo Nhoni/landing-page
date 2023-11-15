@@ -80,8 +80,9 @@
   background-color: #2f7c32;
 }
 
-.iconActive {
+#active button{
   transform: rotate(45deg);
+  transition: all 300ms ease-in-out;
 }
 
 

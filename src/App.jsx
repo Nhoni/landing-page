@@ -7,7 +7,7 @@ function App() {
   const [templateArea, setTemplateArea] = useState({ // Mise en place de la grille par défaut
     gridTemplateAreas: `'box1 box2' 'box1 box3'`,
   });
-  
+
   const [ isActive, setIsActive ] = useState(false);
 
   const gridTemplateAres = { // Les grilles disponibles
@@ -17,8 +17,8 @@ function App() {
   }
 
   const handleStyle = (e) => { // On lance la fonction au clic sur le bouton
-    const box = e.target 
-    setIsActive(!isActive); // On change l'état du bouton comme un toggle
+    const box = e.target.dataset.box 
+    setIsActive(box); 
     setTemplateArea(gridTemplateAres[e.target.dataset.box] || gridTemplateAres["1"])
   };
 
@@ -35,7 +35,7 @@ function App() {
         {[ 1, 2 ,3 ].map((box) => {
             const numero = `box${box}` // resultat "box1", "box2" ou "box3"
             return(
-              <Box key={box} className={numero}>
+              <Box key={box} className={`${numero}` +  ' box'} id={isActive == box ? 'active': null}>
                 <Fab 
                   aria-label="add" 
                   data-box={box} onClick={handleStyle} 
