@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -46,16 +49,41 @@
   height: 450px;
   display: grid !important;
   gap: 1rem;
+  transition: all 300ms ease-in-out;
+}
+
+.box1,
+.box2,
+.box3 {
+  position: relative;
+}
+
+.box2,
+.box3 {
+  border-radius: 2vw;
 }
 
 .box1 {
   grid-area: box1;
+  background-color: #1a76d2;
   border-radius: 2vw 4vw;
 }
 
-.box2, .box3 { border-radius: 2vw; }
-.box2 { grid-area: box2; }
-.box3 { grid-area: box3; }
+.box2 {
+  grid-area: box2;
+  background-color: #9d26b0;
+}
+
+.box3 {
+  grid-area: box3;
+  background-color: #2f7c32;
+}
+
+.iconActive {
+  transform: rotate(45deg);
+}
+
+
 
 /* 
   BOX1 OPEN =
