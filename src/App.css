@@ -58,15 +58,16 @@
   position: relative;
 }
 
+.box1,
 .box2,
 .box3 {
   border-radius: 2vw;
+  transition: all 5s ease-in-out;
 }
 
 .box1 {
   grid-area: box1;
   background-color: #1a76d2;
-  border-radius: 2vw 4vw;
 }
 
 .box2 {
