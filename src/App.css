@@ -40,3 +40,40 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Boxes *************************/
+.box-container {
+  height: 450px;
+  display: grid !important;
+  gap: 1rem;
+}
+
+.box1 {
+  grid-area: box1;
+  border-radius: 2vw 4vw;
+}
+
+.box2, .box3 { border-radius: 2vw; }
+.box2 { grid-area: box2; }
+.box3 { grid-area: box3; }
+
+/* 
+  BOX1 OPEN =
+  grid-template-areas: 
+  "box1 box2"
+  "box1 box3"
+  ;
+
+  BOX2 OPEN =
+  grid-template-areas: 
+  "box1 box2"
+  "box3 box2"
+  ;
+
+  BOX3 OPEN =
+  grid-template-areas: 
+  "box1 box3"
+  "box2 box3"
+  ;
+
+*/
